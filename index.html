@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Eine wichtige Frage</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .card {
+      background: #f8fafc;
+      color: #0f172a;
+      padding: 32px;
+      border-radius: 16px;
+      text-align: center;
+      max-width: 420px;
+      width: 94%;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+    }
+    button {
+      padding: 10px 16px;
+      margin: 6px;
+      border-radius: 10px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .yes { background: #10b981; color: white; }
+    .no { background: #ef4444; color: white; }
+    img { max-width: 100%; border-radius: 12px; margin-top: 15px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Du + ich -> Essen?</h1>
+    <div>
+      <button class="yes" id="btnYes">Ja</button>
+      <button class="no" id="btnNo">Nein</button>
+    </div>
+   <div id="response"></div>
+    <div id="imageContainer"></div>
+  </div>
+
+  <script>
+    const btnYes = document.getElementById('btnYes');
+    const btnNo = document.getElementById('btnNo');
+    const resp = document.getElementById('response');
+    const imgBox = document.getElementById('imageContainer');
+
+    btnYes.addEventListener('click', () => {
+      resp.innerHTML = "";
+      imgBox.innerHTML= '<img src="happ.jpg">';
+    });
+
+    btnNo.addEventListener('click', () => {
+      resp.innerHTML = "";
+      imgBox.innerHTML= '<img src="ass.jpg">';
+    });
+
+  </script>
+</body>
+</html>
